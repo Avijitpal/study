@@ -21,6 +21,4 @@ function cal(a, b , callback){
 
 const ans = cal(2,3,sqaure)
 console.log(ans)
-
-
-
+console.log("Avijit")
