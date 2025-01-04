@@ -61,29 +61,40 @@
 
 //------------------------------------------
 
-function square(a){
- a = a*a;
- return a;
-}
-
-function cube(b){
- b = b * b * b;
- return b;
-}
-
-function quads(){
-
-}
-
-function sumofSomething(a,b,callback){
-    let square = callback(b);
-    return square;
-}
-
-
-let ans = sumofSomething(18,2,cube);
-console.log(ans);
 
 // This is a normal example 
 
+//---------------------------------------------------
 
+
+
+// function square(a){
+//     a = a*a;
+//     return a;
+// }
+
+// function cube(a){
+//     a = a*a*a;
+//     return a;
+// }
+
+// function sumOfFunctions(a,b, callback1,callback2 ){
+//        const value1 = callback1(a);
+//        const value2 = callback2(b);
+//        return value1+value2
+//  }
+
+
+
+// const ans = sumOfFunctions(2,3,square,cube);
+// console.log(ans)
+
+
+function res(food1, food2){
+   setTimeout(()=>{
+       console.log(food1+food2 + " is Ready take it")
+   }, 4000)
+}
+
+
+const Avijit = res("briyani with extra chicken","chicken chaap")

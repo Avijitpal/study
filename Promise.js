@@ -42,10 +42,10 @@
 
 
 
-function myOwnSetTimeout(callback, duration){
-    setTimeout(callback,duration);
+// function myOwnSetTimeout(callback, duration){
+//     setTimeout(callback,duration);
 
-}
+// }
 
 //Under code uses the callback
 
@@ -61,18 +61,20 @@ function myOwnSetTimeout(callback, duration){
 
 
 
-function promisifideMyOwnTimeOut(duration){
-    const p = new Promise(function(resolve){
-         setTimeout(function(){
-            resolve();
-         },duration)
-         console.log(resolve)
-
+const readFilePromise = (... args) =>{
+const fs = require('fs');
+return new Promise((resolve, reject)=>{
+    fs.readFile("git.txt","utf-8",(err, data)=>{
+          if(err) return reject(err)
+            resolve(data)
     })
-    return p;
+})
 }
 
-const ans =  promisifideMyOwnTimeOut(1000)
-ans.then(function(){
-    console.log("It is done")
-})
+readFilePromise("git.txt","utf-8")
+.then(data => console.log(data)).catch(err => console.log(err))
+
+
+setTimeout(()=>{
+    console.log(" hello This is a example of setTimeout")
+}, 4000)
