@@ -60,21 +60,21 @@
 // },  3000 ) 
 
 
-
-const readFilePromise = (... args) =>{
-const fs = require('fs');
-return new Promise((resolve, reject)=>{
-    fs.readFile("git.txt","utf-8",(err, data)=>{
-          if(err) return reject(err)
-            resolve(data)
-    })
+// There is finally and also catch Phrases 
+const promise = new Promise((resolve, reject)=>{
+    const num = Math.random();
+    if(num >= 0.5){
+        resolve("Fillfilled");
+    }
+    else{
+        reject("Not Fullfilled")
+    }
 })
+function handleResolve(value){
+   console.log(value) // The value is retuned by the resolve.
 }
 
-readFilePromise("git.txt","utf-8")
-.then(data => console.log(data)).catch(err => console.log(err))
-
-
-setTimeout(()=>{
-    console.log(" hello This is a example of setTimeout")
-}, 4000)
+function handleReject(reason){
+ console.log(reason)//Here The reason is returned by the reject.
+}
+ promise.then(handleResolve, handleReject)
