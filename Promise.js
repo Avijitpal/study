@@ -78,3 +78,5 @@ function handleReject(reason){
  console.log(reason)//Here The reason is returned by the reject.
 }
  promise.then(handleResolve, handleReject)
+
+ console.log("Avijit")
