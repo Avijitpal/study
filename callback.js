@@ -36,24 +36,3 @@
 
 
 
-
-
-
-function fetchData(callback){
-    setTimeout(()=>{
-          const data = {
-             name:"Avijit",
-             age: 26
-          }
-          callback(data)
-    },3000)
-}
-
-
-fetchData(function(data){
-    console.log(data)
-})
-
-
-
-
