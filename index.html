@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model </title>
+</head>
+<body> 
+    <h1 id = "heading">Hello Avijit How are you</h1>
+    <button id = "change">change the text</button>
+
+    <script>
+       const button = document.getElementById('change');
+       const heading = document.getElementById('heading')
+
+       button.addEventListener('click',()=>{
+            heading.textContent = "it is changed"
+            heading.style.color = 'blue';
+       })
+    </script>
+</body>
+</html>
